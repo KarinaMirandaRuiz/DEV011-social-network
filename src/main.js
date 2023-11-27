@@ -28,24 +28,26 @@ const routes = [
 const defaultRoute = '/';
 const root = document.getElementById('root');
 
-function navigateTo(hash) {
+export function navigateTo(hash) {
   const route = routes.find((routeFound) => routeFound.path === hash);
   // console.log(route);
+  // console.log(window.history.state);
   if (route && route.component) {
     window.history.pushState(
       {},
       route.path,
       window.location.origin + route.path,
     );
-    // console.log(root.firstChild);
     if (root.firstChild != null) {
       root.removeChild(root.firstChild);
     }
     root.appendChild(route.component(navigateTo));
-    // myFunction();
+    window.history.forward();
+    window.history.back();
   } else {
     navigateTo('/error');
   }
+  // console.log(window.history.state);
 }
 
 window.onpopstate = () => {
