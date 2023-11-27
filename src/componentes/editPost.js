@@ -5,8 +5,6 @@ export const editPostModalRender = (postId, initialContent) => {
   const modalEditPost = document.createElement('div');
 
   modalEditPost.classList.add('pupUp');
-  // modalEditPost.style = 'position: fixed;  width: 100%;  height: 100%;
-  //  background-color: rgba(0, 0, 0, 0.7);  z-index: 1;';
 
   // Alert donde se guardaran las publicaciones
   const alertEditPost = document.createElement('article');
@@ -37,8 +35,6 @@ export const editPostModalRender = (postId, initialContent) => {
 
   bodyPost.appendChild(inputTextLabel);
   bodyPost.appendChild(inputTextPost);
-  // ----- style
-  // bodyPost.style = 'border:3px solid orange; backgroundColor:#ffffff; width 95%';
 
   // ----- Pie de la publicación ----- //
   const footerPost = document.createElement('footer');
@@ -56,27 +52,6 @@ export const editPostModalRender = (postId, initialContent) => {
   buttonSaveEditedPost.addEventListener('click', () => {
     updateEditedPostDB(postId, inputTextPost.value);
   });
-
-  // const msjEmptyPost = document.createElement('p');
-  // msjEmptyPost.className = 'errorMessage';
-  // msjEmptyPost.style = 'text-align: center;';
-  // footerPost.append(buttonSaveEditedPost, msjEmptyPost);
-  // console.log(inputTextPost.value);
-  // buttonSaveNewPost.addEventListener('click', async () => {
-  //   if (inputTextPost.value.replace(' ', '').length > 2) {
-  //     msjEmptyPost.innerText = '';
-  //     await insertPostDB(
-  //       userID,
-  //       nameUser,
-  //       inputTextPost.value,
-  //       new Date(),
-  //       allPosts
-  //     );
-  //     modalNewPost.style.display = 'none';
-  //   } else {
-  //     msjEmptyPost.innerText = 'Necesitas insertar texto en tu recomendación';
-  //   }
-  // });
 
   alertEditPost.append(bodyPost, footerPost);
 

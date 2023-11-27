@@ -13,13 +13,6 @@ import newPostImg from '../img/newPostImg.svg';
 import logOutImg from '../img/logOutImg.svg';
 import seven from '../img/perfil/7.svg';
 
-// const pupUpDelete = document.getElementById('popUp');
-// const deleteButton = document.getElementById('deleteButton');
-
-/* queryNameUsers.then((users)=>{
-  users.
-}) */
-
 // función que crea un articulo para cada post
 
 export function renderPost(

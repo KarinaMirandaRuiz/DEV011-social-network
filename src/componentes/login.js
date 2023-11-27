@@ -109,12 +109,10 @@ export const loginView = (navigateTo) => {
       currentUser = await loginEmail(inputEmail, inputPassword);
       // inicia sesión con la función asincrona loginEmail
       navigateTo('/publications'); // Se mueve a la vista de publicaciones
-      // console.log(currentUser, '--------');
       return currentUser;
     } catch (e) {
       errorMessage.innerText = e.message;
       // si no logra iniciar sesión muestra el msj de error en pantalla
-      // console.log(e.message,'....');
       return new Error(e.message);
     }
   });
@@ -136,18 +134,6 @@ export const loginView = (navigateTo) => {
       return new Error(error); // si no logra ingresar manda un error
     }
   });
-
-  /* // Boton de cerrar sesión: SE TIENE QUE MOVER A LA VISTA CORRESPONDIENTE CUANDO SE TENGA!!!
-  const buttonLogOut = document.createElement('button');
-  buttonLogOut.setAttribute('type', 'button');
-  buttonLogOut.setAttribute('value', 'buttonLogout');
-  buttonLogOut.innerText = 'Cerrar sesión';
-  buttonLogOut.classList.add('cerrar');
-  formInputLogin.appendChild(buttonLogOut);
-  buttonLogOut.addEventListener('click', async () => {
-    currentUser = await logout();
-    console.log('.....', currentUser);
-  }); */
 
   // Pregunta sobre si tiene una cuenta
   const askAccount = document.createElement('p');

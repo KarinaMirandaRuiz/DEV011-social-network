@@ -59,12 +59,6 @@ export const newAccount = (navigateTo) => {
   errorInvalidPassword.id = 'errorMessage';
   formInputCreateAccount.append(errorInvalidPassword);
 
-  // Check para mostrar contraseña
-  /* const showPasswordContainer = document.createElement('div');
-  showPasswordContainer.id = 'showPasswordContainer';
-  // Agrega una clase para contener los elementos
-  passwordContainer.appendChild(showPasswordContainer); */
-
   const showPassword = document.createElement('button'); // Cambiado de input a button para que no saliera un espacio en blanco
   showPassword.type = 'button'; // Cambiado de 'checkbox' a 'button'
   showPassword.id = 'showPassword';

@@ -1,8 +1,6 @@
 import { deleteDocDB } from '../firebase/firestore.js';
 
 export function pupUpDelete(postId) {
-//   const pupUpDelete = document.getElementById('popUp');
-
   const popUpContainer = document.createElement('div');
   popUpContainer.classList.add('pupUp');
   popUpContainer.id = 'popUp';
