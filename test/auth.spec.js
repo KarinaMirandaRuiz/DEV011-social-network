@@ -69,13 +69,13 @@ describe('Test for NewAccount', () => {
     await createUserButton.click();
     // await Promise.resolve();
     // console.log(firestoreModule.insertNewUserDB());
-    /*     expect(validLoginModule.inputsFormats).toHaveBeenCalled();
+    /* expect(validLoginModule.inputsFormats).toHaveBeenCalled();
     expect(authModule.createUser).toHaveBeenCalled();
     expect(authModule.createUser()).toEqual(Promise.resolve());
     setTimeout(() => {
       expect(firestoreModule.insertNewUserDB).toHaveBeenCalledTimes(1);
-    }, 1000);
-    expect(firestoreModule.insertNewUserDB()).toEqual(Promise.resolve(true)); */
+    }, 1000); */
+    expect(firestoreModule.insertNewUserDB()).toEqual(Promise.resolve(true));
     return expect(mainModule.navigateTo).toHaveBeenCalled();
   });
 });
